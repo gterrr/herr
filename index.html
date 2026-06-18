@@ -311,7 +311,7 @@
             width: 130px;
             height: 130px;
             border-radius: 50%;
-            background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=300&auto=format&fit=crop') center/cover;
+            background: url('./images/music_img.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -714,11 +714,12 @@
                 <div class="card2">
                     <div class="card2-content">
                         <h3>To You!</h3>
-                        <h2>Happy birthday 🥳🎂🥳 Ankita. I
-                            wish I could remove some of the pain from your life which you are bearing alone. But you're
-                            always welcome 🤗 you can talk anytime you want to talk specially those which you can't say
-                            to others. And i wish this year your all dreams come true .I am wishing you happy birthday
-                            🎈🎂🎈 . Don't be Sad ok be happy 😌
+                        <h2>Happy birthday, Ankita! 🥳🎂🥳 Thanks for all the outing plans. Please know you can always talk to me about anything,
+                             especially the things you can't share with others (if you want to ofc). I truly hope all your dreams come true this year! Also, I'm sorry if I’m not always 
+                             as lively as I portray myself to be. Sometimes my mind just goes blank and I don't know what to say—that’s why I stay quiet, because I 
+                             feel like I'll just be talking nonsense! Maybe that's why I prefer listening instead but im trying yk. Just promise you won't overthink anything when you're 
+                             talking to me.
+                            <strong>Baii</strong>
                         </h2>
 
                         <div class="imageCute2">
@@ -754,19 +755,19 @@
 
             <div class="tilted-stack-wrapper">
                 <div class="tilted-photo-frame tilt-left-deep">
-                    <img src="https://i.pinimg.com/736x/30/15/24/301524f506ef9a2e161e84995797cf81.jpg"
-                        alt="Memory Stack element">
-                </div>
-                <div class="tilted-photo-frame tilt-right-shallow">
                     <img src="https://i.pinimg.com/736x/77/7e/98/777e98fecec9ac86d1da116bd58c8433.jpg"
                         alt="Memory Stack element">
                 </div>
+                <div class="tilted-photo-frame tilt-right-shallow">
+                    <img src="https://i.pinimg.com/736x/30/15/24/301524f506ef9a2e161e84995797cf81.jpg" 
+                        alt="Memory Stack element">
+                </div>
                 <div class="tilted-photo-frame tilt-left-shallow">
-                    <img src="https://i.pinimg.com/736x/ec/66/28/ec6628f5e861bf1190f72fdf11478586.jpg"
+                    <img src="https://i.pinimg.com/736x/56/f3/f5/56f3f52535b0bdad09e19194f424bd55.jpg"
                         alt="Memory Stack element">
                 </div>
                 <div class="tilted-photo-frame tilt-right-deep">
-                    <img src="https://i.pinimg.com/736x/56/f3/f5/56f3f52535b0bdad09e19194f424bd55.jpg"
+                    <img src="https://i.pinimg.com/736x/f1/12/80/f112803242aec9818265f99e23e2b278.jpg"
                         alt="Memory Stack element">
                 </div>
             </div>
@@ -788,8 +789,7 @@
                     </div>
                     <div class="card-back">
                         <h3>A Message for You ✨</h3>
-                        <p>Hey thanks for your presence i really appreciate it, i may not know how to express it but
-                            will you watch Sunsets with me? please?🤍</p>
+                        <p>Hey, stop being so hard on yourself. Never let someone else’s dim light ruin your mood—just shine as you are🤍</p>
                     </div>
                 </div>
             </div>
@@ -806,7 +806,8 @@
                             class="fa-solid fa-circle-play"></i></button>
                     <button class="control-btn"><i class="fa-solid fa-forward-step"></i></button>
                 </div>
-                <audio id="birthdayAudio" src="./images/Cant_Take_My_Eyes_off_You.mp3" type="audio/mpeg"></audio>
+                <audio id="birthdayAudio" src="./images/Cant_Take_My_Eyes_off_You.mp3" type="audio/mpeg"
+                    crossorigin="anonymous" preload="auto" controlsList="nodownload"></audio>
             </div>
 
         </div>
@@ -815,27 +816,23 @@
 
         <div class="gallery-layout reveal">
             <div class="gallery-card tall">
-                <img src="./images/this_is_where.jpeg"
-                    alt="Moments" class="image-box">
-                <div class="card-label">Where it all began... ✨</div>
+                <img src="./images/this_is_where.jpeg" alt="Moments" class="image-box">
+                <div class="card-label">Prolly fav go to place hehe ✨</div>
             </div>
 
             <div class="gallery-card">
-                <img src="./images/time_freezes.jpg"
-                    alt="Celebration" class="image-box">
-                <div class="card-label">what if for sometime the time freezes 🕒</div>
+                <img src="./images/time_freezes.jpg" alt="Celebration" class="image-box">
+                <div class="card-label">What if time could freeze for a little while? 🕒</div>
             </div>
 
             <div class="gallery-card wide">
-                <img src="./images/herrr.jpg"
-                    alt="Magic" class="image-box">
-                <div class="card-label">Every moment feels like magic with you 🌟</div>
+                <img src="./images/herrr.jpg" alt="Magic" class="image-box">
+                <div class="card-label">What if the best moments are the unplanned ones? 🌟</div>
             </div>
 
             <div class="gallery-card">
-                <img src="./images/idk.jpg"
-                    alt="Memories" class="image-box">
-                <div class="card-label">Hey, Thanks for showing up 🤗</div>
+                <img src="./images/idk.jpg" alt="Memories" class="image-box">
+                <div class="card-label">Hey, Thanks for showing up </div>
             </div>
         </div>
 
@@ -897,19 +894,31 @@
         window.addEventListener('DOMContentLoaded', spawnHeartsBackground);
 
         // Simulated Media Playback Systems
+
         let audioPlaying = false;
         const playBtnIcon = document.getElementById('playBtn').querySelector('i');
         const disk = document.getElementById('art-disk');
         const playerNode = document.getElementById('playerNode');
+        const audioNode = document.getElementById('birthdayAudio');
 
         function togglePlay() {
             if (!audioPlaying) {
-                playBtnIcon.className = "fa-solid fa-circle-pause";
-                disk.style.animationPlayState = "running";
-                playerNode.classList.add('playing');
-                audioPlaying = true;
-                triggerMagic();
+                // Force volume full and unmute just in case
+                audioNode.volume = 1.0;
+                audioNode.muted = false;
+
+                // Execute browser play promise thread
+                audioNode.play().then(() => {
+                    playBtnIcon.className = "fa-solid fa-circle-pause";
+                    disk.style.animationPlayState = "running";
+                    playerNode.classList.add('playing');
+                    audioPlaying = true;
+                    triggerMagic();
+                }).catch(error => {
+                    console.error("Audio playback failed completely:", error);
+                });
             } else {
+                audioNode.pause();
                 playBtnIcon.className = "fa-solid fa-circle-play";
                 disk.style.animationPlayState = "paused";
                 playerNode.classList.remove('playing');
@@ -1075,8 +1084,9 @@
             boxmail.classList.remove('active')
         })
 
-        // Initialize Lenis Smooth Scroll
-        
+        // 
+
+
     </script>
 </body>
 
