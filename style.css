@@ -120,64 +120,71 @@ body {
         transform: rotate(-12deg);
     }
 }
-.title{
+.title {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
-    font-family: "Titan One", sans-serif;
-    font-size: 3rem;
     flex-direction: column;
-    perspective: 1000px;
-}
-.title .happy, .title .birthday{
-    position: relative;
-    text-shadow: 4px 4px var(--color-black), 
-                -4px 4px var(--color-black), 
-                4px -4px var(--color-black), 
-                -4px -4px var(--color-black), 
-                4px 8px 0 var(--color-black);
-    font-weight: bold;
-    display: flex;
+    align-items: center;
     justify-content: center;
-}
-.title .happy{
-    color: var(--color-white);
-}
-.title .happy span, .title .birthday span{
-    transform: translateY(50px);
-    opacity: 0;
-    visibility: hidden;
-    animation: txtTranslateY .5s var(--t) forwards;
-}
-@keyframes txtTranslateY{
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-}
-.title .birthday{
-    color: var(--color-text-pink);
+    /* Replaced cartoon fonts with premium, elegant typography */
+    font-family: 'Playfair Display', serif; 
+    font-size: 3.5rem;
 }
 
-.title .hat{
-    position: absolute;
-    right: 45px;
-    top: -350px;
-    transform: rotate(-40deg);
-    z-index: -1;
-    animation: topHat 4s 7s forwards ease;
+.title .happy, .title .birthday {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
-@keyframes topHat{
-    20%, 30%{
-        top: -30px;
-        transform-origin: left;
-        transform: rotate(-40deg);
+
+.title .happy {
+    color: var(--text-main);
+}
+
+.title .birthday {
+    font-family: 'Dancing Script', cursive; /* Flowing script font for balance */
+    color: var(--primary-dark);
+    font-size: 4rem;
+    margin-top: -10px;
+}
+
+/* Individual letter transition styling */
+.title .happy span, .title .birthday span {
+    display: inline-block;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: txtTranslateY 0.6s var(--t) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes txtTranslateY {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
-    35%, 100%{
-        top: -30px;
-        transform: rotate(0deg);
+}
+
+/* Upgraded Birthday Hat Animation Sequence */
+.title .hat {
+    position: absolute;
+    top: -40px;
+    right: calc(50% - 140px); /* Centers it dynamically relative to the text block */
+    transform: scale(0) rotate(-15deg);
+    opacity: 0;
+    z-index: 2;
+    /* Starts at 1.8s, exactly after 'birthday' finishes animating at 1.4s */
+    animation: dropHatIn 0.8s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes dropHatIn {
+    0% {
+        transform: scale(0) translateY(-50px) rotate(-15deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0) rotate(-10deg);
+        opacity: 1;
     }
 }
 .date__of__birth, .name{
@@ -243,7 +250,7 @@ body {
 .right .box__account{
     position: relative;
     transform: translateY(700px);
-    animation: topBoxImage 8s 7s forwards ease-in;
+    animation: topBoxImage 5s 4s forwards ease-in;
 }
 @keyframes topBoxImage{
     to{
@@ -451,7 +458,7 @@ body {
     bottom: 180px;
     left: 600px;
     transform: scale(0);
-    animation: scaleCricle 3s 15s forwards ease-in-out;
+    animation: scaleCricle 3s 8s forwards ease-in-out;
 }
 
 
@@ -601,7 +608,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    opacity: 0;
+    opacity: 100%;
 }
 #mewmew.animationOp{
     animation: opacityHeart 1s 1s forwards;
